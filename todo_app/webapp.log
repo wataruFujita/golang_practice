@@ -1,0 +1,11 @@
+2023/11/04 17:43:38 main.go:16: test
+2023/11/04 17:59:23 base.go:22: sql: unknown driver "splite3" (forgotten import?)
+2023/11/04 18:04:09 base.go:23: sql: unknown driver "splite3" (forgotten import?)
+2023/11/04 18:05:35 base.go:23: sql: unknown driver "splite3" (forgotten import?)
+2023/11/04 18:06:06 base.go:23: sql: unknown driver "splite3" (forgotten import?)
+2023/11/04 18:09:13 base.go:23: sql: unknown driver "splite3" (forgotten import?)
+2023/11/04 18:38:06 users.go:28: table users has no column named create_at
+2023/11/05 09:32:37 main.go:46: no such table: users
+2023/11/05 09:33:43 main.go:46: no such table: users
+2023/11/05 09:34:11 main.go:46: table persons has no column named email
+2023/11/05 09:51:14 main.go:60: No row

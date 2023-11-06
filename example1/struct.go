@@ -7,6 +7,9 @@ type User struct {
 	Age  int
 }
 
+//構造体のメソッド
+
+
 func UpdateUser(user User) {
 	user.Name = "A"
 	user.Age = 1000
@@ -15,6 +18,15 @@ func UpdateUser(user User) {
 func UpdateUser2(user *User) {
 	user.Name = "B"
 	user.Age = 2000
+}
+
+func (u User) SayName() {
+	fmt.Println(u.Name)
+}
+
+//実際の構造体にポイント演算子がついていてもついていなくても同じくnameを更新できる
+func (u *User) SetName(name string) {
+	u.Name = name
 }
 
 func main() {
@@ -57,4 +69,17 @@ func main() {
 	fmt.Println(user1)
 	//user8はUpdateUser2でポインタ型を渡しているので値が変更されている
 	fmt.Println(user8)
+
+
+	//レシーバーに渡す構造体はポインタ型かどうかは関係ない
+	user10 := User{Name: "user10"}
+	user10.SayName()
+
+	user10.SetName("user10-2")
+	user10.SayName()
+
+	user11 := &User{Name: "user11"}
+	user11.SetName("user11-2")
+	user11.SayName()
+
 }
